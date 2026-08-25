@@ -557,28 +557,28 @@ function setupReveal(root=document){
    ========================================================================== */
 (function projects(){
   const DATA = [
-    {
-      name: "Advanced Vulnerability Scanner",
-      tagline: "Real-time Vulnerability Scanner",
-      desc: "Developed a web-based vulnerability scanner featuring multi-threaded port scanning, service detection, banner grabbing, SSL analysis, and CVE-based vulnerability assessment. Implemented user authentication, scan history, downloadable TXT/JSON/HTML reports, dashboard analytics, and an admin management portal.  Built a responsive interface with real-time security scoring, severity visualization, and detailed remediation recommendations. Python, Flask, SQLite technologies were used.",
-      tags: [" multi-threaded port scanning", "service detection", "banner grabbing"],
-      img: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1200&auto=format&fit=crop",
-    },
-    {
-      name: "Food Hunter",
-      tagline: "Real-time Food Delivery Website",
-      desc: "A fully functional food delivery website developed using ASP.NET for the backend and MS SQL for the database. The platform supports user authentication, restaurant listings, order management, and real-time delivery status tracking.",
-      tags: ["ASP.NET", "SQL"],
-      img: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop",
-    },
-    {
-      name: "VS SPORTS BLOG",
-      tagline: "Basic Sports Blog Website",
-      desc: "A dynamic blog platform centered around sports content, built using ASP.NET. It features a responsive layout, comment system, admin dashboard for post management, and SQL database integration for content storage.",
-      tags: ["ASP.NET"],
-      img: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=1200&auto=format&fit=crop",
-    },
-  ];
+  {
+    name: "Advanced Vulnerability Scanner",
+    tagline: "Real-time Vulnerability Scanner",
+    desc: "Developed a web-based vulnerability scanner featuring multi-threaded port scanning, service detection, banner grabbing, SSL analysis, and CVE-based vulnerability assessment. Implemented user authentication, scan history, downloadable TXT/JSON/HTML reports, dashboard analytics, and an admin management portal. Built a responsive interface with real-time security scoring, severity visualization, and detailed remediation recommendations. Python, Flask, SQLite technologies were used.",
+    tags: ["multi-threaded port scanning", "service detection", "banner grabbing"],
+    img: "images/vulnerability-scanner.jpg",
+  },
+  {
+    name: "Food Hunter",
+    tagline: "Real-time Food Delivery Website",
+    desc: "A fully functional food delivery website developed using ASP.NET for the backend and MS SQL for the database. The platform supports user authentication, restaurant listings, order management, and real-time delivery status tracking.",
+    tags: ["ASP.NET", "SQL"],
+    img: "images/food-hunter.jpg",
+  },
+  {
+    name: "VS SPORTS BLOG",
+    tagline: "Basic Sports Blog Website",
+    desc: "A dynamic blog platform centered around sports content, built using ASP.NET. It features a responsive layout, comment system, admin dashboard for post management, and SQL database integration for content storage.",
+    tags: ["ASP.NET"],
+    img: "images/vs-sports-blog.jpg",
+  },
+];
 
   const grid = document.getElementById("project-grid");
   grid.innerHTML = DATA.map((p,i)=> `
