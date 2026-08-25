@@ -1,224 +1,758 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Vighnesh :: Security Researcher</title>
-<meta name="description" content="Vighnesh — Cybersecurity enthusiast, portfolio and projects." />
 
-<!-- Fonts -->
+<title>Vighnesh :: Security Researcher</title>
+
+<meta
+  name="description"
+  content="Vighnesh — Cybersecurity enthusiast, security researcher and developer portfolio."
+/>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link
+  href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+  rel="stylesheet"
+>
 
 <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
-<!-- ============ BOOT SCREEN ============ -->
+<!-- =========================================================
+     BOOT SCREEN
+========================================================= -->
+
 <div id="boot-screen">
+
   <div class="boot-terminal">
-    <p><span class="prompt">root@vighnesh</span>:<span class="path">~</span>$ <span id="boot-line-1"></span></p>
+
+    <p>
+      <span class="prompt">root@vighnesh</span>:<span class="path">~</span>$
+      <span id="boot-line-1"></span>
+    </p>
+
     <p id="boot-line-2"></p>
     <p id="boot-line-3"></p>
     <p id="boot-line-4"></p>
+
     <div class="boot-progress-wrap">
-      <div class="boot-progress-bar"><div id="boot-progress-fill"></div></div>
+      <div class="boot-progress-bar">
+        <div id="boot-progress-fill"></div>
+      </div>
+
       <span id="boot-percent">0%</span>
     </div>
+
   </div>
+
 </div>
 
-<!-- ============ AMBIENT CANVAS LAYERS ============ -->
+
+<!-- =========================================================
+     GLOBAL ATMOSPHERE
+========================================================= -->
+
 <canvas id="grid-canvas"></canvas>
+
 <div class="scanline-overlay"></div>
 <div class="vignette-overlay"></div>
 <div class="noise-overlay"></div>
+
 <div id="cursor-dot"></div>
 <div id="cursor-ring"></div>
 
-<!-- ============ NAV ============ -->
-<nav id="navbar">
-  <div class="nav-inner">
-    <a href="#hero" class="brand">
-      <span class="brand-bracket">[</span>💻<span class="brand-accent">_</span>V.I.G.H.N.E.S.H<span class="brand-accent">_</span><span class="brand-bracket">]</span>
-    </a>
-    <ul class="nav-links">
-      <li><a href="#hero"><span class="nav-idx">0x00</span> home</a></li>
-      <li><a href="#academics"><span class="nav-idx">0x01</span> academics</a></li>
-      <li><a href="#certifications"><span class="nav-idx">0x02</span> certifications</a></li>
-      <li><a href="#projects"><span class="nav-idx">0x03</span> projects</a></li>
-      <li><a href="#contact"><span class="nav-idx">0x04</span> contact</a></li>
-    </ul>
-    <button id="nav-burger" aria-label="menu"><span></span><span></span><span></span></button>
+
+<!-- =========================================================
+     PERSISTENT HACKER
+========================================================= -->
+
+<div id="hacker-rig" aria-hidden="true">
+
+  
+
+  <div class="hacker-caption">
+    <span>01</span>
+    <strong>OFFENSIVE SECURITY</strong>
+    <span>///</span>
+    <span>DEFENSIVE ENGINEERING</span>
   </div>
+
+</div>
+
+
+<!-- =========================================================
+     NAVBAR
+========================================================= -->
+
+<nav id="navbar">
+
+  <div class="nav-inner">
+
+    <a href="#hero" class="brand">
+
+      <span class="brand-bracket">[</span>
+
+      💻
+
+      <span class="brand-accent">_</span>
+      V.I.G.H.N.E.S.H
+      <span class="brand-accent">_</span>
+
+      <span class="brand-bracket">]</span>
+
+    </a>
+
+
+    <ul class="nav-links">
+
+      <li>
+        <a href="#hero">
+          <span class="nav-idx">0x00</span>
+          home
+        </a>
+      </li>
+
+      <li>
+        <a href="#academics">
+          <span class="nav-idx">0x01</span>
+          academics
+        </a>
+      </li>
+
+      <li>
+        <a href="#certifications">
+          <span class="nav-idx">0x02</span>
+          certifications
+        </a>
+      </li>
+
+      <li>
+        <a href="#projects">
+          <span class="nav-idx">0x03</span>
+          projects
+        </a>
+      </li>
+
+      <li>
+        <a href="#contact">
+          <span class="nav-idx">0x04</span>
+          contact
+        </a>
+      </li>
+
+    </ul>
+
+
+    <button id="nav-burger" aria-label="menu">
+
+      <span></span>
+      <span></span>
+      <span></span>
+
+    </button>
+
+  </div>
+
 </nav>
 
+
 <div id="mobile-menu">
+
   <a href="#hero">home</a>
   <a href="#academics">academics</a>
   <a href="#certifications">certifications</a>
   <a href="#projects">projects</a>
   <a href="#contact">contact</a>
+
 </div>
+
+
+<!-- =========================================================
+     MAIN
+========================================================= -->
 
 <main>
 
-  <!-- ============ HERO ============ -->
-  <section id="hero">
-    <canvas id="hero-canvas"></canvas>
 
-    <div class="hero-content">
-      <p class="eyebrow"><span class="dot-live"></span> status: online // securing systems since 2026</p>
-      <h1 class="hero-title">
-        <span class="hero-hi">whoami →</span>
-        <span class="glitch-text" data-text="VIGHNESH">VIGHNESH</span>
-      </h1>
-      <p class="hero-sub">
-        <span id="typed-role"></span><span class="cursor-blink">_</span>
-      </p>
-      <p class="hero-desc">
-        I break things on purpose, patch them on principle. Currently obsessed with
-        offensive security, network defense, and building tools that make attackers'
-        lives harder.
-      </p>
-      <div class="hero-actions">
-        <a href="#projects" class="btn btn-primary"><span>view_projects.sh</span></a>
-        <a href="#contact" class="btn btn-ghost"><span>./contact_me</span></a>
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section id="hero">
+
+  <canvas id="hero-canvas"></canvas>
+
+  <div class="hero-content">
+
+    <p class="eyebrow">
+
+      <span class="dot-live"></span>
+
+      status: online // securing systems since 2026
+
+    </p>
+
+
+    <h1 class="hero-title">
+
+      <span class="hero-hi">
+        whoami →
+      </span>
+
+      <span
+        class="glitch-text"
+        data-text="VIGHNESH"
+      >
+        VIGHNESH
+      </span>
+
+    </h1>
+
+
+    <p class="hero-sub">
+
+      <span id="typed-role"></span>
+
+      <span class="cursor-blink">_</span>
+
+    </p>
+
+
+    <p class="hero-desc">
+
+      I break things on purpose, patch them on principle.
+      Currently obsessed with offensive security, network defense,
+      vulnerability research, and building tools that make attackers'
+      lives harder.
+
+    </p>
+
+
+    <div class="hero-actions">
+
+      <a
+        href="#projects"
+        class="btn btn-primary"
+      >
+        <span>view_projects.sh</span>
+      </a>
+
+
+      <a
+        href="#contact"
+        class="btn btn-ghost"
+      >
+        <span>./contact_me</span>
+      </a>
+
+    </div>
+
+
+    <div class="hero-hint">
+
+      <svg
+        width="18"
+        height="18"
+        viewBox="0 0 24 24"
+        fill="none"
+      >
+
+        <path
+          d="M4 6h16M4 6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2M4 6v10a2 2 0 0 0 2 2h3m9-12v10a2 2 0 0 1-2 2h-3m0 0v2m0-2H9m0 0v2"
+          stroke="currentColor"
+          stroke-width="1.4"
+          stroke-linecap="round"
+        />
+
+      </svg>
+
+      <span>
+        scroll through the system
+      </span>
+
+    </div>
+
+  </div>
+
+  <!-- =========================================================
+     3D CYBER VAULT — HERO RIGHT SIDE
+========================================================= -->
+
+<div id="vault-stage">
+
+  <!-- THREE.JS CANVAS -->
+  <canvas id="vault-canvas"></canvas>
+
+  <!-- HUD -->
+  <div class="vault-hud">
+
+    <div class="vault-hud-top">
+      <span class="hud-dot"></span>
+      <span>SECURE VAULT // ONLINE</span>
+    </div>
+
+    <div class="vault-id">
+      VAULT_ID :: VGHX-07
+    </div>
+
+  </div>
+
+
+  <!-- TERMINAL -->
+  <div id="vault-terminal">
+
+    <div class="terminal-header">
+      <span>root@vighnesh:~</span>
+      <span class="terminal-status">● LIVE</span>
+    </div>
+
+    <div id="vault-log"></div>
+
+    <div class="terminal-cursor">
+      <span>root@vighnesh:~$</span>
+      <span class="cursor-block">█</span>
+    </div>
+
+  </div>
+
+
+  <!-- ACCESS MESSAGE -->
+  <div id="vault-access">
+
+    <div class="access-line"></div>
+
+    <div class="access-main">
+      ACCESS GRANTED
+    </div>
+
+    <div class="access-sub">
+      SECURITY CLEARANCE :: LEVEL 07
+    </div>
+
+  </div>
+
+
+  <!-- ACHIEVEMENT -->
+  <div id="vault-achievement">
+
+    <div class="achievement-line"></div>
+
+    <div class="achievement-title">
+      ACHIEVEMENT UNLOCKED
+    </div>
+
+    <div class="achievement-sub">
+      SYSTEM BREACHED // REWARD UNLOCKED
+    </div>
+
+  </div>
+
+
+  <!-- SMALL TECH LABELS -->
+  <div class="vault-label label-left">
+    <span>SYS</span>
+    <strong>07</strong>
+  </div>
+
+  <div class="vault-label label-right">
+    <span>ENCRYPTION</span>
+    <strong>AES-256</strong>
+  </div>
+
+
+  <!-- BOTTOM STATUS -->
+  <div class="vault-bottom-status">
+    <span>●</span>
+    VAULT INTEGRITY 100%
+    <i></i>
+    CORE ONLINE
+  </div>
+
+</div>
+
+
+
+  <div class="scroll-indicator">
+
+
+    <div class="scroll-line">
+      <div class="scroll-dot"></div>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     ACADEMICS
+========================================================= -->
+
+<section id="academics">
+
+  <div class="section-head">
+
+    <span class="section-tag">
+      0x01 / background
+    </span>
+
+    <h2>
+      Academic <span class="accent">Log</span>
+    </h2>
+
+    <p class="section-sub">
+
+      A chronological trace of the trail — education,
+      certifications, and the systems I learned to break
+      along the way.
+
+    </p>
+
+  </div>
+
+
+  <div
+    class="timeline"
+    id="timeline"
+  ></div>
+
+</section>
+
+
+<!-- =========================================================
+     CERTIFICATIONS
+========================================================= -->
+
+<section id="certifications">
+
+  <div
+    class="cert-bg-grid"
+    aria-hidden="true"
+  ></div>
+
+
+  <div class="section-head reveal">
+
+    <span class="section-tag">
+      0x02 / credentials
+    </span>
+
+    <h2>
+      Verified <span class="accent">Certifications</span>
+    </h2>
+
+    <p class="section-sub">
+
+      Signed, sealed, and stamped — the courses,
+      programs, and training that leveled up my skill tree.
+
+    </p>
+
+  </div>
+
+
+  <div
+    class="cert-grid"
+    id="cert-grid"
+  ></div>
+
+</section>
+
+
+<!-- =========================================================
+     PROJECTS
+========================================================= -->
+
+<section id="projects">
+
+  <div class="section-head">
+
+    <span class="section-tag">
+      0x03 / payloads
+    </span>
+
+    <h2>
+      Selected <span class="accent">Projects</span>
+    </h2>
+
+    <p class="section-sub">
+
+      Hover a card to unpack it. Each one is a real build —
+      tools, applications, labs, and research I've shipped.
+
+    </p>
+
+  </div>
+
+
+  <div
+    class="project-grid"
+    id="project-grid"
+  ></div>
+
+</section>
+
+
+<!-- =========================================================
+     CONTACT
+========================================================= -->
+
+<section id="contact">
+
+  <div class="section-head">
+
+    <span class="section-tag">
+      0x04 / uplink
+    </span>
+
+    <h2>
+      Establish <span class="accent">Connection</span>
+    </h2>
+
+    <p class="section-sub">
+
+      Got a role, a bug bounty, a research collaboration,
+      or just want to talk infosec? Open a channel below.
+
+    </p>
+
+  </div>
+
+
+  <div class="contact-wrap">
+
+
+    <form
+      id="contact-form"
+      class="contact-form"
+      action="https://formspree.io/f/mwledrwq"
+      method="POST"
+    >
+
+      <div class="terminal-bar">
+
+        <span class="dot red"></span>
+        <span class="dot amber"></span>
+        <span class="dot green"></span>
+
+        <span class="terminal-title">
+          send_message.sh
+        </span>
+
       </div>
 
-      <div class="hero-hint">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2M4 6v10a2 2 0 0 0 2 2h3m9-12v10a2 2 0 0 1-2 2h-3m0 0v2m0-2H9m0 0v2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
-        hover the laptop below to decrypt my profile
+
+      <label>
+
+        <span>
+          $ set --name
+        </span>
+
+        <input
+          type="text"
+          name="name"
+          placeholder="your_name"
+          required
+        />
+
+      </label>
+
+
+      <label>
+
+        <span>
+          $ set --email
+        </span>
+
+        <input
+          type="email"
+          name="email"
+          placeholder="you@domain.com"
+          required
+        />
+
+      </label>
+
+
+      <label>
+
+        <span>
+          $ set --message
+        </span>
+
+        <textarea
+          name="message"
+          rows="5"
+          placeholder="type your payload here..."
+          required
+        ></textarea>
+
+      </label>
+
+
+      <button
+        type="submit"
+        class="btn btn-primary submit-btn"
+      >
+
+        <span id="submit-label">
+          execute ./send
+        </span>
+
+      </button>
+
+
+      <p
+        id="form-status"
+        class="form-status"
+      ></p>
+
+    </form>
+
+
+    <div class="contact-side">
+
+
+      <div class="contact-card">
+
+        <h3>
+          Direct channels
+        </h3>
+
+
+        <a
+          class="channel"
+          href="mailto:vighneshshinde0610@gmail.com"
+        >
+
+          <span class="channel-ico">
+            ✉
+          </span>
+
+          <span>
+
+            <b>Email</b>
+
+            <small>
+              vighneshshinde0610@gmail.com
+            </small>
+
+          </span>
+
+        </a>
+
+
+        <a
+          class="channel"
+          href="https://github.com/VIGHNEXHHH"
+          target="_blank"
+          rel="noopener"
+        >
+
+          <span class="channel-ico">
+            ⌥
+          </span>
+
+          <span>
+
+            <b>GitHub</b>
+
+            <small>
+              github.com/VIGHNEXHHH
+            </small>
+
+          </span>
+
+        </a>
+
+
+        <a
+          class="channel"
+          href="https://www.linkedin.com/in/vighnesh-shinde-164890250/"
+          target="_blank"
+          rel="noopener"
+        >
+
+          <span class="channel-ico">
+            in
+          </span>
+
+          <span>
+
+            <b>LinkedIn</b>
+
+            <small>
+              linkedin.com/in/vighnesh-shinde-164890250/
+            </small>
+
+          </span>
+
+        </a>
+
       </div>
-    </div>
 
-    <!-- Info panel revealed on laptop hover -->
-    <aside id="hacker-info-panel" class="info-panel">
-      <div class="info-panel-head">
-        <span class="blink-tag">● DECRYPTED</span>
-        <span class="info-panel-file">profile.enc</span>
-      </div>
-      <div class="info-panel-row"><span>NAME</span><b>Vighnesh</b></div>
-      <div class="info-panel-row"><span>ROLE</span><b>Cybersecurity Enthusiast</b></div>
-      <div class="info-panel-row"><span>FOCUS</span><b>AppSec · Network Security </b></div>
-      <div class="info-panel-row"><span>STATUS</span><b class="text-live">Open to opportunities</b></div>
-      <div class="info-panel-bar"><div></div></div>
-    </aside>
 
-    <div class="scroll-indicator">
-      <span>scroll</span>
-      <div class="scroll-line"><div class="scroll-dot"></div></div>
-    </div>
-  </section>
+      <div class="contact-card small">
 
-  <!-- ============ ACADEMICS ============ -->
-  <section id="academics">
-    <div class="section-head">
-      <span class="section-tag">0x01 / background</span>
-      <h2>Academic <span class="accent">Log</span></h2>
-      <p class="section-sub">A chronological trace of the trail — education, certifications, and the systems I learned to break along the way.</p>
-    </div>
+        <h3>
+          Signal strength
+        </h3>
 
-    <div class="timeline" id="timeline">
-      <!-- JS populated, fallback below for no-js -->
-    </div>
-  </section>
 
-  <!-- ============ CERTIFICATIONS ============ -->
-  <section id="certifications">
-    <div class="cert-bg-grid" aria-hidden="true"></div>
-    <div class="section-head reveal">
-      <span class="section-tag">0x02 / credentials</span>
-      <h2>Verified <span class="accent">Certifications</span></h2>
-      <p class="section-sub">Signed, sealed, and stamped — the courses, programs, and training that leveled up my skill tree.</p>
-    </div>
+        <div class="signal-bars">
 
-    <div class="cert-grid" id="cert-grid"></div>
-  </section>
+          <span style="--h:30%"></span>
+          <span style="--h:55%"></span>
+          <span style="--h:75%"></span>
+          <span style="--h:95%"></span>
+          <span style="--h:65%"></span>
 
-  <!-- ============ PROJECTS ============ -->
-  <section id="projects">
-    <div class="section-head">
-      <span class="section-tag">0x03 / payloads</span>
-      <h2>Selected <span class="accent">Exploits</span></h2>
-      <p class="section-sub">Hover a card to unpack it. Each one is a real build — tools, labs, and research I've shipped.</p>
-    </div>
-
-    <div class="project-grid" id="project-grid"></div>
-  </section>
-
-  <!-- ============ CONTACT ============ -->
-  <section id="contact">
-    <div class="section-head">
-      <span class="section-tag">0x04 / uplink</span>
-      <h2>Establish <span class="accent">Connection</span></h2>
-      <p class="section-sub">Got a role, a bug bounty, a research collab, or just want to talk infosec? Open a channel below.</p>
-    </div>
-
-    <div class="contact-wrap">
-         <form id="contact-form" class="contact-form" action="https://formspree.io/f/mwledrwq" method="POST">
-        <div class="terminal-bar">
-          <span class="dot red"></span><span class="dot amber"></span><span class="dot green"></span>
-          <span class="terminal-title">send_message.sh</span>
         </div>
 
-        <label>
-          <span>$ set --name</span>
-          <input type="text" name="name" placeholder="your_name" required />
-        </label>
-        <label>
-          <span>$ set --email</span>
-          <input type="email" name="email" placeholder="you@domain.com" required />
-        </label>
-        <label>
-          <span>$ set --message</span>
-          <textarea name="message" rows="5" placeholder="type your payload here..." required></textarea>
-        </label>
 
-        <button type="submit" class="btn btn-primary submit-btn">
-          <span id="submit-label">execute ./send</span>
-        </button>
-        <p id="form-status" class="form-status"></p>
-      </form>
+        <p>
+          Response time: usually &lt; 24h
+        </p>
 
-      <div class="contact-side">
-        <div class="contact-card">
-          <h3>Direct channels</h3>
-          <a class="channel" href="mailto:vighnesh@example.com">
-            <span class="channel-ico">✉</span>
-            <span><b>Email</b><small>vighneshshinde0610@gmail.com</small></span>
-          </a>
-          <a class="channel" href="https://github.com/" target="_blank" rel="noopener">
-            <span class="channel-ico">⌥</span>
-            <span><b>GitHub</b><small> www.linkedin.com/in/vighnesh-shinde </small></span>
-          </a>
-          <a class="channel" href="https://linkedin.com/" target="_blank" rel="noopener">
-            <span class="channel-ico">in</span>
-            <span><b>LinkedIn</b><small>https://www.linkedin.com/in/vighnesh-shinde-164890250/</small></span>
-          </a>
-        </div>
-
-        <div class="contact-card small">
-          <h3>Signal strength</h3>
-          <div class="signal-bars">
-            <span style="--h:30%"></span><span style="--h:55%"></span>
-            <span style="--h:75%"></span><span style="--h:95%"></span><span style="--h:65%"></span>
-          </div>
-          <p>Response time: usually &lt; 24h</p>
-        </div>
       </div>
-    </div>
-  </section>
 
-  <footer>
-    <p>© <span id="year"></span> Vighnesh — built from scratch, encrypted with care.</p>
-    <p class="footer-tag">// end of file</p>
-  </footer>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+  <p>
+    © <span id="year"></span>
+    Vighnesh Shinde Portfolio.
+  </p>
+
+  <span class="footer-tag">
+    [ SYSTEM SECURED // CONNECTION TERMINATED ]
+  </span>
+
+</footer>
 
 </main>
 
-<script type="module" src="script.js"></script>
+
+<script
+  type="module"
+  src="script.js"
+></script>
+
 </body>
 </html>
