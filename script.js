@@ -14,7 +14,7 @@ const TIMELINE_DATA = [
     period: "2022 — 2025",
     title: "BCA (Bachelor's in Computer Applications)",
     org: "Somaiya Vidhyavihar University",
-    desc: "SCoursework in technology, programming, networking, databases, web development and computer systems.",
+    desc: "Coursework in technology, programming, networking, databases, web development and computer systems.",
     tags: ["Networking", "Web Development", "OS Security"]
   },
   {
@@ -145,10 +145,10 @@ const PROJECT_DATA = [
 
 
 const ROLE_STRINGS = [
-  "Cybersecurity Researcher",
+  "Cybersecurity Enthusiast",
   "Penetration Tester in Training",
-  "Full-Stack Developer",
-  "CTF Player"
+  "Ethical Hacking Aspirant",
+  "Web Developer"
 ];
 
 

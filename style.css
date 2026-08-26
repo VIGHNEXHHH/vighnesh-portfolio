@@ -379,6 +379,127 @@ body::before {
 
 }
 
+/* =========================================================
+   VIGHNESH CYBER LOGO
+========================================================= */
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  text-decoration: none;
+  color: var(--text);
+
+  font-family: var(--font-mono);
+}
+
+
+/* ---------------------------------------------------------
+   MONOGRAM
+--------------------------------------------------------- */
+
+.brand-logo {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  font-family: var(--font-mono);
+  font-size: 1.25rem;
+  font-weight: 800;
+
+  letter-spacing: -4px;
+
+  line-height: 1;
+}
+
+
+/* V */
+
+.brand-v {
+  color: var(--text);
+}
+
+
+/* Slash */
+
+.brand-slash {
+  color: var(--accent);
+  margin: 0 2px;
+
+  transform: skewX(-12deg);
+}
+
+
+/* X */
+
+.brand-x {
+  color: var(--accent);
+}
+
+
+/* ---------------------------------------------------------
+   NAME
+--------------------------------------------------------- */
+
+.brand-name {
+  font-family: var(--font-mono);
+
+  font-size: 0.78rem;
+  font-weight: 800;
+
+  letter-spacing: 3px;
+
+  color: var(--text);
+
+  position: relative;
+}
+
+
+/* Small cyber line underneath */
+
+.brand-name::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -5px;
+
+  width: 100%;
+  height: 1px;
+
+  background: var(--accent);
+
+  transform: scaleX(0.35);
+  transform-origin: left;
+
+  transition: transform 0.3s ease;
+}
+
+
+/* ---------------------------------------------------------
+   HOVER
+--------------------------------------------------------- */
+
+.brand:hover .brand-name::after {
+  transform: scaleX(1);
+}
+
+
+.brand:hover .brand-slash {
+  text-shadow:
+    0 0 8px var(--accent),
+    0 0 18px var(--accent);
+}
+
+
+.brand:hover .brand-x {
+  text-shadow:
+    0 0 8px var(--accent),
+    0 0 18px var(--accent);
+}
 
 .boot-progress-wrap {
 
