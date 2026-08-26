@@ -17,7 +17,7 @@
 <link
   href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
   rel="stylesheet"
->
+/>
 
 <link rel="stylesheet" href="style.css" />
 </head>
@@ -42,11 +42,13 @@
     <p id="boot-line-4"></p>
 
     <div class="boot-progress-wrap">
+
       <div class="boot-progress-bar">
         <div id="boot-progress-fill"></div>
       </div>
 
       <span id="boot-percent">0%</span>
+
     </div>
 
   </div>
@@ -72,9 +74,7 @@
      PERSISTENT HACKER
 ========================================================= -->
 
-<div id="hacker-rig" aria-hidden="true">
-
-  
+<!--<div id="hacker-rig" aria-hidden="true">
 
   <div class="hacker-caption">
     <span>01</span>
@@ -83,7 +83,7 @@
     <span>DEFENSIVE ENGINEERING</span>
   </div>
 
-</div>
+</div>-->
 
 
 <!-- =========================================================
@@ -188,6 +188,7 @@
 
   <canvas id="hero-canvas"></canvas>
 
+
   <div class="hero-content">
 
     <p class="eyebrow">
@@ -280,106 +281,204 @@
 
   </div>
 
-  <!-- =========================================================
-     3D CYBER VAULT — HERO RIGHT SIDE
-========================================================= -->
 
-<div id="vault-stage">
+  <!-- =======================================================
+       CYBER VAULT
+  ======================================================== -->
 
-  <!-- THREE.JS CANVAS -->
-  <canvas id="vault-canvas"></canvas>
+  <div id="vault-stage">
 
-  <!-- HUD -->
-  <div class="vault-hud">
+    <canvas id="vault-canvas"></canvas>
 
-    <div class="vault-hud-top">
-      <span class="hud-dot"></span>
-      <span>SECURE VAULT // ONLINE</span>
-    </div>
 
-    <div class="vault-id">
-      VAULT_ID :: VGHX-07
+    <!-- VAULT OUTER FRAME -->
+
+    <div class="vault-frame">
+
+      <div class="vault-frame-corner top-left"></div>
+      <div class="vault-frame-corner top-right"></div>
+      <div class="vault-frame-corner bottom-left"></div>
+      <div class="vault-frame-corner bottom-right"></div>
+
+
+      <!-- VAULT DOOR -->
+
+      <div
+        class="vault-doors"
+        id="vault-doors"
+      >
+
+        <div class="vault-door door-tl"></div>
+        <div class="vault-door door-tr"></div>
+        <div class="vault-door door-bl"></div>
+        <div class="vault-door door-br"></div>
+
+        <div class="vault-lock">
+
+          <div class="lock-ring"></div>
+          <div class="lock-core"></div>
+
+          <span class="lock-text">
+            VGHX
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <!-- MERCEDES -->
+
+      <div
+        id="mercedes-stage"
+        aria-hidden="true"
+      >
+
+        <canvas id="mercedes-canvas"></canvas>
+
+        
+
+      </div>
+
+
+      <!-- HUD -->
+
+      <div class="vault-hud">
+
+        <div class="vault-hud-top">
+
+          <span class="hud-dot"></span>
+
+          <span id="vault-hud-status">
+            SECURE VAULT // LOCKED
+          </span>
+
+        </div>
+
+        <div class="vault-id">
+          VAULT_ID :: VGHX-07
+        </div>
+
+      </div>
+
+
+      <!-- TERMINAL -->
+
+      <div id="vault-terminal">
+
+        <div class="terminal-header">
+
+          <span>
+            root@vighnesh:~
+          </span>
+
+          <span class="terminal-status">
+            ● LIVE
+          </span>
+
+        </div>
+
+        <div id="vault-log"></div>
+
+        <div class="terminal-cursor">
+
+          <span>
+            root@vighnesh:~$
+          </span>
+
+          <span class="cursor-block">
+            █
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <!-- ACCESS -->
+
+      <div id="vault-access">
+
+        <div class="access-line"></div>
+
+        <div class="access-main">
+          ACCESS GRANTED
+        </div>
+
+        <div class="access-sub">
+          SECURITY CLEARANCE :: LEVEL 07
+        </div>
+
+      </div>
+
+
+      <!-- ACHIEVEMENT -->
+
+      <div id="vault-achievement">
+
+        <div class="achievement-line"></div>
+
+        <div class="achievement-title">
+          ACHIEVEMENT UNLOCKED
+        </div>
+
+        <div class="achievement-sub">
+          SYSTEM BREACHED // REWARD UNLOCKED
+        </div>
+
+      </div>
+
+
+      <!-- LABELS -->
+
+      <div class="vault-label label-left">
+
+        <span>
+          SYS
+        </span>
+
+        <strong>
+          07
+        </strong>
+
+      </div>
+
+
+      <div class="vault-label label-right">
+
+        <span>
+          ENCRYPTION
+        </span>
+
+        <strong>
+          AES-256
+        </strong>
+
+      </div>
+
+
+      <!-- BOTTOM STATUS -->
+
+      <div class="vault-bottom-status">
+
+        <span>●</span>
+
+        <span id="vault-integrity-label">
+          VAULT INTEGRITY 100%
+        </span>
+
+        <i></i>
+
+        CORE ONLINE
+
+      </div>
+
     </div>
 
   </div>
-
-
-  <!-- TERMINAL -->
-  <div id="vault-terminal">
-
-    <div class="terminal-header">
-      <span>root@vighnesh:~</span>
-      <span class="terminal-status">● LIVE</span>
-    </div>
-
-    <div id="vault-log"></div>
-
-    <div class="terminal-cursor">
-      <span>root@vighnesh:~$</span>
-      <span class="cursor-block">█</span>
-    </div>
-
-  </div>
-
-
-  <!-- ACCESS MESSAGE -->
-  <div id="vault-access">
-
-    <div class="access-line"></div>
-
-    <div class="access-main">
-      ACCESS GRANTED
-    </div>
-
-    <div class="access-sub">
-      SECURITY CLEARANCE :: LEVEL 07
-    </div>
-
-  </div>
-
-
-  <!-- ACHIEVEMENT -->
-  <div id="vault-achievement">
-
-    <div class="achievement-line"></div>
-
-    <div class="achievement-title">
-      ACHIEVEMENT UNLOCKED
-    </div>
-
-    <div class="achievement-sub">
-      SYSTEM BREACHED // REWARD UNLOCKED
-    </div>
-
-  </div>
-
-
-  <!-- SMALL TECH LABELS -->
-  <div class="vault-label label-left">
-    <span>SYS</span>
-    <strong>07</strong>
-  </div>
-
-  <div class="vault-label label-right">
-    <span>ENCRYPTION</span>
-    <strong>AES-256</strong>
-  </div>
-
-
-  <!-- BOTTOM STATUS -->
-  <div class="vault-bottom-status">
-    <span>●</span>
-    VAULT INTEGRITY 100%
-    <i></i>
-    CORE ONLINE
-  </div>
-
-</div>
-
 
 
   <div class="scroll-indicator">
-
 
     <div class="scroll-line">
       <div class="scroll-dot"></div>
@@ -415,7 +514,6 @@
     </p>
 
   </div>
-
 
   <div
     class="timeline"
@@ -527,7 +625,6 @@
 
   <div class="contact-wrap">
 
-
     <form
       id="contact-form"
       class="contact-form"
@@ -617,7 +714,6 @@
 
 
     <div class="contact-side">
-
 
       <div class="contact-card">
 
@@ -748,6 +844,19 @@
 
 </main>
 
+
+<!-- =========================================================
+     THREE.JS
+========================================================= -->
+
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+    "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+  }
+}
+</script>
 
 <script
   type="module"
